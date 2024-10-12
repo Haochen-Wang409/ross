@@ -51,21 +51,28 @@
             <h1 class="title is-3 publication-title">Reconstructive Visual Instruction Tuning</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://haochen-wang409.github.io/">Haochen Wang</a><sup>1,2</sup></span> &#20
+                <a href="https://haochen-wang409.github.io/">Haochen Wang</a><sup>1,2</sup></span> &nbsp
               <span class="author-block">
-                <a href="https://yexiguafuqihao.github.io/">Anlin Zheng</a><sup>3</sup></span> &#20
+                <a href="https://yexiguafuqihao.github.io/">Anlin Zheng</a><sup>3</sup></span> &nbsp
               <span class="author-block">
-                <a href="">Yucheng Zhao</a><sup>4</sup></span> &#20
+                <a href="">Yucheng Zhao</a><sup>4†</sup></span> &nbsp
               <span class="author-block">
-                <a href="">Tiancai Wang</a><sup>4</sup></span> &#20
+                <a href="">Tiancai Wang</a><sup>4*</sup></span> &nbsp
               <span class="author-block">
                 <a href="">Zheng Ge</a><sup>5</sup></span>
             </div>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="">Xiangyu Zhang</a><sup>4,5</sup></span> &#20
+                <a href="">Xiangyu Zhang</a><sup>4,5</sup></span> &nbsp
               <span class="author-block">
-                <a href="">Zhaoxiang Zhang</a><sup>1,2,6</sup></span>
+                <a href="">Zhaoxiang Zhang</a><sup>1,2,6*</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <p class="footnote">
+                <span class="footnote-symbol">*</span>Corresponding authors
+                <span class="footnote-symbol"><sup>†</sup></span>Project lead
+              </p>
             </div>
 
             <div class="is-size-5 publication-authors">
@@ -75,8 +82,8 @@
               <span class="author-block"><sup>2</sup> University of Chinese Academy of Sciences</span>
             </div>
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>3</sup> University of Hong Kong</span> &#20 &#20
-              <span class="author-block"><sup>4</sup> MEGVII Technology</span> &#20 &#20
+              <span class="author-block"><sup>3</sup> University of Hong Kong</span> &nbsp &nbsp
+              <span class="author-block"><sup>4</sup> MEGVII Technology</span> &nbsp &nbsp
               <span class="author-block"><sup>5</sup> StepFun</span>
             </div>
             <div class="is-size-5 publication-authors">
@@ -165,8 +172,6 @@
 
                           <tr>
                             <th>Method</th>
-                            <th>Visual Encoder</th>
-                            <th>LLM</th>
                             <th>POPE</th>
                             <th>HallusionBench</th>
                             <th>MMBench-EN</th>
@@ -182,33 +187,120 @@
                         <tbody id="tabResults">
 
                           <tr>
-                            <td><span style="font-variant: small-caps;">Ross</span>-7B</td>
-                            <td>SigLIP-ViT-SO400M/14 @ 384</td>
-                            <td>Qwen2-7B-Instruct</td>
-                            <td>89.2</td>
-                            <td>57.3</td>
-                            <td>79.0</td>
-                            <td>76.1</td>
-                            <td>73.0</td>
-                            <td>43.4</td>
-                            <td>54.7</td>
+                            <td>LLaVA-v1.5-7B</td>
+                            <td>86.2</td>
+                            <td>47.5</td>
                             <td>65.5</td>
-                            <td>76.8</td>
+                            <td>58.5</td>
+                            <td>66.0</td>
+                            <td>34.4</td>
+                            <td>20.0</td>
+                            <td>62.0</td>
+                            <td>55.4</td>
+                          </tr>
+
+                          <tr>
+                            <td>LLaVA-v1.6-7B</td>
+                            <td>86.5</td>
+                            <td>35.8</td>
+                            <td>67.4</td>
+                            <td>60.1</td>
+                            <td>70.2</td>
+                            <td>35.8</td>
+                            <td>37.8</td>
+                            <td>64.2</td>
+                            <td>67.1</td>
+                          </tr>
+
+                          <tr>
+                            <td>Cambrian-1-8B</td>
+                            <td>87.4</td>
+                            <td>48.7</td>
+                            <td>75.9</td>
+                            <td>68.9</td>
+                            <td><b>74.7</b></td>
+                            <td>42.7</td>
+                            <td>51.3</td>
+                            <td>64.6</td>
+                            <td>73.0</td>
+                          </tr>
+
+                          <tr>
+                            <td><span style="font-variant: small-caps;">Ross</span>-7B</td>
+                            <td><b>89.2</b></td>
+                            <td><b>57.3</b></td>
+                            <td><b>79.0</b></td>
+                            <td><b>76.1</b></td>
+                            <td>73.0</td>
+                            <td><b>43.4</b></td>
+                            <td><b>54.7</b></td>
+                            <td><b>65.5</b></td>
+                            <td><b>76.8</b></td>
+                          </tr>
+
+                          <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+
+                          <tr>
+                            <td>LLaVA-v1.5-13B</td>
+                            <td>82.5</td>
+                            <td>44.9</td>
+                            <td>68.8</td>
+                            <td>63.6</td>
+                            <td>68.2</td>
+                            <td>36.6</td>
+                            <td>31.9</td>
+                            <td>63.3</td>
+                            <td>60.8</td>
+                          </tr>
+
+                          <tr>
+                            <td>LLaVA-v1.6-13B</td>
+                            <td>86.2</td>
+                            <td>36.7</td>
+                            <td>70.0</td>
+                            <td>64.1</td>
+                            <td>71.9</td>
+                            <td>36.2</td>
+                            <td>35.6</td>
+                            <td><b>65.4</b></td>
+                            <td>72.4</td>
+                          </tr>
+
+                          <tr>
+                            <td>Cambrian-1-13B</td>
+                            <td>85.7</td>
+                            <td>54.0</td>
+                            <td><b>75.7</b></td>
+                            <td>65.9</td>
+                            <td><b>74.4</b></td>
+                            <td>40.0</td>
+                            <td>41.3</td>
+                            <td>64.3</td>
+                            <td>73.6</td>
                           </tr>
 
                           <tr>
                             <td><span style="font-variant: small-caps;">Ross</span>-13B</td>
-                            <td>SigLIP-ViT-SO400M/14 @ 384</td>
-                            <td>Vicuna-13B-v1.5</td>
-                            <td>88.7</td>
-                            <td>56.4</td>
+                            <td><b>88.7</b></td>
+                            <td><b>56.4</b></td>
                             <td>73.6</td>
-                            <td>67.4</td>
+                            <td><b>67.4</b></td>
                             <td>71.1</td>
-                            <td>41.3</td>
-                            <td>44.7</td>
+                            <td><b>41.3</b></td>
+                            <td><b>44.7</b></td>
                             <td>65.2</td>
-                            <td>73.8</td>
+                            <td><b>73.8</b></td>
                           </tr>
 
                         </tbody>
