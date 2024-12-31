@@ -1,6 +1,6 @@
 # Ross: Reconstructive Visual Instruction Tuning
 
-[[Project Page](https://haochen-wang409.github.io/ross/)] [[Model Zoo](tbd)]
+[[Project Page](https://haochen-wang409.github.io/ross/)] [[Model Zoo](https://huggingface.co/HaochenWang/ross-qwen2-7b)]
 
 [**Reconstructive Visual Instruction Tuning**](https://arxiv.org/pdf/2410.09575) by
 [Haochen Wang](https://haochen-wang409.github.io), 
