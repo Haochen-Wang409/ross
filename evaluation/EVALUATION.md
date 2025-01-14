@@ -58,11 +58,11 @@ python -m accelerate.commands.launch \
     --num_processes=8 \
     -m lmms_eval \
     --model ross \
-    --model_args pretrained="../checkpoints/ross-qwen2-7b,conv_template=qwen_2,device_map=auto" \
+    --model_args "pretrained=HaochenWang/ross-qwen2-7b,conv_template=qwen_2,device_map=auto" \
     --tasks chartqa,docvqa_val,infovqa_val,textvqa_val,gqa,mmlu,hellaswag,ifeval \
     --batch_size 1 \
     --log_samples \
-    --output_path ./results/ross-siglip-qwen2-7b-pt558k-sft737k
+    --output_path ./results/ross-qwen2-7b
 ```
 
 ## Evaluation on MMVP
@@ -72,7 +72,7 @@ The evaluation on [MMVP](https://openaccess.thecvf.com/content/CVPR2024/papers/T
 cd MMVP
 
 python mmvp_eval.py \
-    --model_path ../checkpoints/ross-qwen2-7b \
+    --model_path HaochenWang/ross-qwen2-7b \
     --conv_mode qwen_2 \
     --answers_file ./answers/ross-qwen2-7b.jsonl
 
