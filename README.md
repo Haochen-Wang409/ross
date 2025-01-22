@@ -35,6 +35,7 @@
 
 ## Release
 
+- [2025/01/22] 🔥🔥🔥 **Ross has been accepted by ICLR 2025!** 🔥🔥🔥
 - [2024/12/31] 🔥 All codes and checkpoints of Ross have been released. 
 - [2024/10/12] 🔥 **Ross** has been released. Checkout the [paper](https://arxiv.org/pdf/2410.09575) for details.
 
