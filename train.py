@@ -1088,7 +1088,7 @@ def train(attn_implementation="flash_attention_2"):
             torch_dtype=(torch.bfloat16 if training_args.bf16 else None),
             **bnb_model_from_pretrained_args
         )
-    elif 'vicuna' or 'Llama-3' in model_args.model_name_or_path:
+    elif 'vicuna' in model_args.model_name_or_path or 'Llama-3' in model_args.model_name_or_path:
         model = RossLlamaForCausalLM.from_pretrained(
             model_args.model_name_or_path,
             cache_dir=training_args.cache_dir,
