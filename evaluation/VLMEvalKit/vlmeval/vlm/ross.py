@@ -35,7 +35,7 @@ class Ross(BaseModel):
         self.model.eval()
         self.model.cuda()
 
-        if 'Qwen2'in model_path:
+        if 'qwen2'in model_path.lower():
             self.conv_mode = 'v1_qwen2'
         elif 'llama3' in model_path.lower():
             self.conv_mode = 'llama3'
